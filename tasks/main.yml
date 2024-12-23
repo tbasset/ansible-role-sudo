@@ -42,11 +42,13 @@
 - name: Set up sudoers_linesinfile
   ansible.builtin.include_tasks: "sudoers_linesinfile.yml"
   when:
-    - sudo is defined
-    - sudo.sudoers_linesinfile is defined
+#    - sudo is defined
+#    - sudo.sudoers_linesinfile is defined
+    - sudoers_linesinfile is defined
 
 - name: Set up sudoers_d_files
   ansible.builtin.include_tasks: "sudoers_d_files.yml"
   when:
-    - sudo is defined
-    - sudo.sudoers_d_files is defined
+#    - sudo is defined
+#    - sudo.sudoers_d_files is defined
+    - sudoers_d_files is defined
